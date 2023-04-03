@@ -55,7 +55,13 @@ namespace csharp_lavanderia
             ConsumoDetersivo = 40;
             ConsumoAmmorbidente = 5;
         }
-        
+        public void Sgrassante()
+        {
+            Costo = 4;
+            Durata = 60;
+            ConsumoDetersivo = 60;
+            ConsumoAmmorbidente = 15;
+        }
         
 
     }
