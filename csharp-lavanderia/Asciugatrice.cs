@@ -16,7 +16,7 @@ namespace csharp_lavanderia
         public override bool InUso { get; set; }
         public override int Costo  { get; set; }
         public override int Durata { get; set; }
-        public int Guadagno { get { return guadagno; } set { guadagno += value; } }
+        public override int Guadagno { get { return guadagno; } set { guadagno += value; } }
 
         public Asciugatrice(int id)
         {

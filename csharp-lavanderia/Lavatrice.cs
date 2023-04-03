@@ -26,7 +26,7 @@ namespace csharp_lavanderia
         public int StatoAmmorbidente { get; set; }
         public int ConsumoDetersivo { get; set; }
         public int ConsumoAmmorbidente { get; set; }
-        public int Guadagno { get { return guadagno; } set { guadagno += value; } }
+        public override int Guadagno { get { return guadagno; } set { guadagno += value; } }
 
         public Lavatrice(int id)
         {

@@ -12,6 +12,7 @@ namespace csharp_lavanderia
         public abstract bool InUso { get; set; }
         public abstract int Durata { get; set; }
         public abstract int Costo { get; set; }
+        public abstract int Guadagno { get; set; }
         public List<Lavatrice> Lavatrici { get; set; }
         public List<Asciugatrice> Asciugatrici { get; set; }
 

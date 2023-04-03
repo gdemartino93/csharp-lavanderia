@@ -10,9 +10,9 @@
             Console.WriteLine("Scegli un opzione?");
             Console.WriteLine("[1]Usa una Lavatrice");
             Console.WriteLine("[2]Usa un' Asciugatrice");
-            Console.WriteLine("[3]Ottieni lo stato di tutte le lavatrici");
+            Console.WriteLine("[3]Ottieni lo stato di tutte le macchine");
             Console.WriteLine("[4]Ottieni lo stato di una macchina per ID");
-            Console.WriteLine("[4]Ottieni lo stato di tutte le asciugatrici");
+            Console.WriteLine("[5]Ottieni incasso totale");
             int scelta = Convert.ToInt32(Console.ReadLine());
 
             Lavanderia sharpLavanderia = new Lavanderia();
@@ -39,6 +39,10 @@
                     Console.WriteLine("Inserisci l'id della macchina");
                     int id = Convert.ToInt32(Console.ReadLine());
                     sharpLavanderia.StatoMacchina(id);
+                    break;
+                case 5:
+             
+                    Console.WriteLine($"{sharpLavanderia.OttieniIncasso()}euro");
                     break;
 
             }

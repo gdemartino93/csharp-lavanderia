@@ -65,6 +65,22 @@ internal class Lavanderia
             {
                 lavatrice.InUso = true;
                 lavatrice.Avvia();
+
+                Console.WriteLine("Scegli il programma");
+                Console.WriteLine("[1]Rinfrescante [2]Rinnovante [3] Sgrassante");
+                int scelta = Convert.ToInt32(Console.ReadLine());
+                switch (scelta)
+                {
+                    case 1:
+                        lavatrice.Rinfrescante();
+                        break;
+                    case 2:
+                        lavatrice.Rinnovante();
+                        break;
+                    case 3:
+                        lavatrice.Sgrassante();
+                        break;
+                }
                 return lavatrice;
             }
         }
@@ -92,5 +108,14 @@ internal class Lavanderia
                 macchina.ToString();
             }
         }
+    }
+    public double OttieniIncasso()
+    {
+        int total = 0;
+        foreach(Macchina macchina in macchine)
+        {
+            total += macchina.Guadagno;
+        }
+        return total * Program.Gettone;
     }
 }
