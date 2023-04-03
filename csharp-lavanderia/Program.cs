@@ -19,19 +19,38 @@
                 new Asciugatrice(4),
                 new Asciugatrice(5),
         };
-            Console.WriteLine();
-            foreach (Macchina macchina in macchine)
+            Console.WriteLine("Benvenuto nella lavenderia");
+            Console.WriteLine("Cosa vuoi usare?");
+            Console.WriteLine("[1]Lavatrice [2]Asciugatrice");
+            int scelta = Convert.ToInt32(Console.ReadLine());
+
+            if(scelta == 1)
             {
-                if(macchina.InUso == false)
+                foreach (Macchina macchina in macchine)
                 {
-                    macchina.Avvia();
-                    break;
+                    if (macchina.InUso == false)
+                    {
+                        macchina.Avvia();
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Nessuna macchina libera");
+                        break;
+                    }
+
+
                 }
+                
             }
-            foreach (Macchina macchina in macchine)
-            {
-                Console.WriteLine($"Macchina {macchina.Id}: {(macchina.InUso ? "in uso" : "libera")}");
-            }
+
+
+
+
+            //foreach (Macchina macchina in macchine)
+            //{
+            //    Console.WriteLine($"Macchina {macchina.Id}: {(macchina.InUso ? "in uso" : "libera")}");
+            //}
 
 
         }
