@@ -10,20 +10,20 @@ namespace csharp_lavanderia
     {
         private int maxCapienzaDetersivo = 1000;
         private int maxCapienzaAmmorbidente = 500;
-        private List<ProgrammaLavatrice> programmiLavatrice;
+        private List<ProgrammaLavatrice> programmi;
         private int statoDetersivo;
         private int statoAmmorbidente;
         private bool inUso;
 
         public int MaxCapienzaDetersivo { get; }
         public int MaxCapienzaAmmorbidente { get; }
-        public List<ProgrammaLavatrice> ProgrammiLavatrice { get; set; }
+        public List<ProgrammaLavatrice> Programmi { get; set; }
         public int StatoDetersivo { get; set; }
         public int StatoAmmorbidente { get; set; }
         public bool InUso { get; set; }
         public Lavatrice(List<Programma> programmi, int statoDetersivo, int statoAmmorbidente,bool inUso) : base(programmi,inUso)
         {
-            ProgrammiLavatrice = new List<ProgrammaLavatrice>();
+            Programmi = new List<ProgrammaLavatrice>();
             StatoAmmorbidente = statoAmmorbidente;
             StatoDetersivo = statoDetersivo;
             InUso = inUso;
