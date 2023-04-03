@@ -9,7 +9,7 @@ namespace csharp_lavanderia
     internal class Asciugatrice : Macchina
     {
         private int id;
-        private bool inUso;
+        private bool inUso = false;
 
         public override int Id { get; set; }
         public override bool InUso { get; set; }

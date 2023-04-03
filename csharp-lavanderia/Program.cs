@@ -2,10 +2,10 @@
 {
     internal class Program
     {
-        public const double gettone = 0.50;
+        public const double Gettone = 0.50;
         static void Main(string[] args)
         {
-
+            string spacer = "@-----------------------------------------------@";
             List<Macchina> macchine = new List<Macchina>
             {
                 new Lavatrice(1),
@@ -39,13 +39,11 @@
                     }
                     else
                     {
-                        Console.WriteLine("Nessuna macchina libera");
+                        Console.WriteLine("Nessuna lavatrice libera");
                         break;
                     }
-
-
                 }
-                
+        
             }
             if (scelta == 2)
             {
@@ -53,28 +51,33 @@
                 {
                     if (macchina.InUso == false && macchina is Asciugatrice)
                     {
+                        macchinaScelta = macchina;
                         macchina.Avvia();
                         Console.WriteLine("Scegli il programma");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Nessuna macchina libera");
                         break;
                     }
-
-
                 }
 
+                if (macchinaScelta == null)
+                {
+                    Console.WriteLine("Nessuna asciugatrice libera");
+                    return;
+                }
             }
 
-
-
-
-            //foreach (Macchina macchina in macchine)
-            //{
-            //    Console.WriteLine($"Macchina {macchina.Id}: {(macchina.InUso ? "in uso" : "libera")}");
-            //}
-
+            if (macchinaScelta is Lavatrice && macchinaScelta != null)
+            {
+                Console.WriteLine("[1] Rinfrescante");
+                Console.WriteLine("[2] Rinnovante");
+                Console.WriteLine("[3] Sgrassante");
+                scelta = Convert.ToInt32(Console.ReadLine());
+            }
+            if(macchinaScelta is Asciugatrice && macchinaScelta != null)
+            {
+                Console.WriteLine("[1]Rapido");
+                Console.WriteLine("[2]Intenso");
+                scelta = Convert.ToInt32(Console.ReadLine());
+            }
 
         }
     }
