@@ -15,6 +15,7 @@ namespace csharp_lavanderia
         private int statoDetersivo;
         private int statoAmmorbidente;
         private bool inUso = false;
+        private int guadagno = 0;
 
         public int Id { get; set; }
         public int MaxCapienzaDetersivo { get { return maxCapienzaDetersivo; } }
@@ -23,6 +24,7 @@ namespace csharp_lavanderia
         public int StatoDetersivo { get; set; }
         public int StatoAmmorbidente { get; set; }
         public bool InUso { get { return inUso; } set { inUso = value; } }
+        public int Guadagno { get { return guadagno; } set { guadagno += value; } }
 
         public Lavatrice(int id,List<Programma> programmi) : base(programmi)
         {
@@ -31,12 +33,13 @@ namespace csharp_lavanderia
             StatoAmmorbidente = MaxCapienzaAmmorbidente;
             StatoDetersivo = MaxCapienzaDetersivo;
             InUso = inUso;
+            Guadagno += guadagno;
 
         }
 
-        public void ToString()
+        public override void ToString()
         {
-            Console.WriteLine($"Lavatrice {Id}. Stato ammorbidente: {StatoAmmorbidente}, stato detersivo {StatoDetersivo}.In uso {inUso} ");
+            Console.WriteLine($"Lavatrice {Id}. Stato ammorbidente: {StatoAmmorbidente}, stato detersivo {StatoDetersivo}.In uso {inUso}. Il guadagno è {Guadagno} ");
         }
     }
 }

@@ -22,5 +22,9 @@ namespace csharp_lavanderia
             Programmi = programmi;
             InUso = inUso;
         }
+        public override void ToString()
+        {
+            Console.WriteLine($"Asciugatrice {Id}. In uso {InUso} ");
+        }
     }
 }

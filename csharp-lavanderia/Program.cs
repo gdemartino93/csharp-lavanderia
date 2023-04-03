@@ -29,7 +29,10 @@
                 new Asciugatrice(4,programmiAsciugatrici),
                 new Asciugatrice(5,programmiAsciugatrici),
         };
-   
+             foreach(Macchina macchina in macchine)
+            {
+                macchina.ToString();
+            }
 
         }
     }
