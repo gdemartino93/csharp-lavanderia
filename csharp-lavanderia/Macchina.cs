@@ -9,11 +9,14 @@ namespace csharp_lavanderia
     abstract class Macchina
     {
         private List<Programma> programmi;
+        private bool inUso;
         public List<Programma> Programmi { get; set; }
+        public bool InUso { get; set; }
 
-        public Macchina(List<Programma> programmi)
+        public Macchina(List<Programma> programmi, bool inUso)
         {
             Programmi = programmi;
+            InUso = inUso;
         }
     }
 }
