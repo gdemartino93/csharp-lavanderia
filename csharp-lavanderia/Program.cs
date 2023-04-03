@@ -3,9 +3,10 @@
     internal class Program
     {
         public const double Gettone = 0.50;
+        public const string Spacer = "@-----------------------------------------------@";
         static void Main(string[] args)
         {
-            string spacer = "@-----------------------------------------------@";
+            
             List<Macchina> macchine = new List<Macchina>
             {
                 new Lavatrice(1),
@@ -32,9 +33,7 @@
                     {
                         //prendiamo la macchina libera
                         macchinaScelta = macchina;
-                        Console.WriteLine(spacer);
-                        macchina.Avvia();
-                        Console.WriteLine(spacer);
+                        macchina.Avvia();             
                         Console.WriteLine("Scegli il programma");
                         break;
 
@@ -54,9 +53,7 @@
                     if (macchina.InUso == false && macchina is Asciugatrice)
                     {
                         macchinaScelta = macchina;
-                        Console.WriteLine(spacer);
                         macchina.Avvia();
-                        Console.WriteLine(spacer);
                         Console.WriteLine("Scegli il programma");
                         break;
                     }
@@ -71,6 +68,7 @@
 
             if (macchinaScelta is Lavatrice && macchinaScelta != null)
             {
+                Lavatrice lavatriceScelta = (Lavatrice)macchinaScelta;
                 Console.WriteLine("[1] Rinfrescante");
                 Console.WriteLine("[2] Rinnovante");
                 Console.WriteLine("[3] Sgrassante");
@@ -78,38 +76,32 @@
                 switch (scelta)
                 {
                     case 1:
-                        Console.WriteLine(spacer);
-                        Console.WriteLine("Lavaggio rinfrescante avviato");
-                        Console.WriteLine(spacer);
+                        lavatriceScelta.Rinfrescante();
                         break;
                     case 2:
-                        Console.WriteLine(spacer);
-                        Console.WriteLine("Lavaggio Rinnovante avviato");
-                        Console.WriteLine(spacer);
+                        lavatriceScelta.Rinnovante();
+
                         break;
                     case 3:
-                        Console.WriteLine(spacer);
-                        Console.WriteLine("Lavaggio Sgrassante avviato");
-                        Console.WriteLine(spacer);
+                        lavatriceScelta.Sgrassante();
+
                         break;
                 }
             }
             if(macchinaScelta is Asciugatrice && macchinaScelta != null)
             {
+                Asciugatrice asciugatriceScelta = (Asciugatrice)macchinaScelta;
                 Console.WriteLine("[1]Rapido");
                 Console.WriteLine("[2]Intenso");
                 scelta = Convert.ToInt32(Console.ReadLine());
                 switch(scelta)
                 {
                     case 1:
-                        Console.WriteLine(spacer);
-                        Console.WriteLine("Asciugatura rapida avviata");
-                        Console.WriteLine(spacer);
+                        asciugatriceScelta.Rapido();
+
                         break;
                     case 2:
-                        Console.WriteLine(spacer);
-                        Console.WriteLine("Asciugatura intensa avviata");
-                        Console.WriteLine(spacer);
+                        asciugatriceScelta.Intenso();
                         break;
                 }
             }
