@@ -12,7 +12,8 @@ namespace csharp_lavanderia
         public abstract bool InUso { get; set; }
         public abstract int Durata { get; set; }
         public abstract int Costo { get; set; }
-       
+        public List<Lavatrice> Lavatrici { get; set; }
+        public List<Asciugatrice> Asciugatrici { get; set; }
 
         public virtual void ToString()
         {
@@ -20,5 +21,6 @@ namespace csharp_lavanderia
         }
         public abstract void Avvia();
         public abstract int VediGuadagno();
+        public abstract void VisualizzaStato();
     }
 }

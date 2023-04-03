@@ -105,7 +105,6 @@
                 }
             }
             Console.WriteLine(macchinaScelta.VediGuadagno());
-            ;
         }
     }
 }

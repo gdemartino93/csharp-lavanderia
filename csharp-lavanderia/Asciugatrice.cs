@@ -54,5 +54,9 @@ namespace csharp_lavanderia
         {
             return Guadagno;
         }
+        public override void VisualizzaStato()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
