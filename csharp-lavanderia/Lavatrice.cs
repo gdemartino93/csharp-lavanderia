@@ -24,6 +24,8 @@ namespace csharp_lavanderia
         public int MaxCapienzaAmmorbidente { get { return maxCapienzaAmmorbidente;} }
         public int StatoDetersivo { get; set; }
         public int StatoAmmorbidente { get; set; }
+        public int ConsumoDetersivo { get; set; }
+        public int ConsumoAmmorbidente { get; set; }
         public int Guadagno { get { return guadagno; } set { guadagno += value; } }
 
         public Lavatrice(int id)
@@ -38,6 +40,12 @@ namespace csharp_lavanderia
         public override void ToString()
         {
             Console.WriteLine($"Lavatrice {Id}. Stato ammorbidente: {StatoAmmorbidente}, stato detersivo {StatoDetersivo}.In uso {inUso}. Il guadagno è {Guadagno} ");
+        }
+        public void Rinfrescante()
+        {
+            Costo = 2;
+            Durata = 20;
+            cONSU
         }
         
 
