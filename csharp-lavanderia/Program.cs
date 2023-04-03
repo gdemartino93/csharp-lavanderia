@@ -11,6 +11,7 @@
             Console.WriteLine("[1]Usa una Lavatrice");
             Console.WriteLine("[2]Usa un' Asciugatrice");
             Console.WriteLine("[3]Ottieni lo stato di tutte le lavatrici");
+            Console.WriteLine("[4]Ottieni lo stato di una macchina per ID");
             Console.WriteLine("[4]Ottieni lo stato di tutte le asciugatrici");
             int scelta = Convert.ToInt32(Console.ReadLine());
 
@@ -34,6 +35,12 @@
                 case 3:
                     sharpLavanderia.StatoMacchine();
                     break;
+                case 4:
+                    Console.WriteLine("Inserisci l'id della macchina");
+                    int id = Convert.ToInt32(Console.ReadLine());
+                    sharpLavanderia.StatoMacchina(id);
+                    break;
+
             }
 
         }

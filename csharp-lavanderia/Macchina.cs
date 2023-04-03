@@ -17,7 +17,7 @@ namespace csharp_lavanderia
 
         public virtual void ToString()
         {
-            Console.WriteLine("asdsad");
+            Console.WriteLine("");
         }
         public abstract void Avvia();
         public abstract int VediGuadagno();

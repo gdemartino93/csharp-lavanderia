@@ -13,11 +13,11 @@ internal class Lavanderia
             new Lavatrice(3),
             new Lavatrice(4),
             new Lavatrice(5),
-            new Asciugatrice(1),
-            new Asciugatrice(2),
-            new Asciugatrice(3),
-            new Asciugatrice(4),
-            new Asciugatrice(5),
+            new Asciugatrice(6),
+            new Asciugatrice(7),
+            new Asciugatrice(8),
+            new Asciugatrice(9),
+            new Asciugatrice(10),
     };
 
     public Lavanderia()
@@ -32,6 +32,8 @@ internal class Lavanderia
             macchina.ToString();
         }
     }
+
+
     public List<Lavatrice> OttieniLavatrici()
     {
         foreach (Macchina macchina in macchine)
@@ -70,9 +72,9 @@ internal class Lavanderia
     }
     public Asciugatrice UsaAsciugatrice()
     {
-        foreach(Asciugatrice asciugatrice in Asciugatrici)
+        foreach (Asciugatrice asciugatrice in Asciugatrici)
         {
-            if(asciugatrice.InUso == false)
+            if (asciugatrice.InUso == false)
             {
                 asciugatrice.InUso = true;
                 asciugatrice.Avvia();
@@ -80,5 +82,15 @@ internal class Lavanderia
             }
         }
         return null;
+    }
+    public void StatoMacchina(int id)
+    {
+        foreach (Macchina macchina in macchine)
+        {
+            if (macchina.Id == id)
+            {
+                macchina.ToString();
+            }
+        }
     }
 }
