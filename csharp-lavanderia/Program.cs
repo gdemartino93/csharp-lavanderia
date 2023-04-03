@@ -23,15 +23,19 @@
             Console.WriteLine("Cosa vuoi usare?");
             Console.WriteLine("[1]Lavatrice [2]Asciugatrice");
             int scelta = Convert.ToInt32(Console.ReadLine());
-
+            Macchina macchinaScelta = null;
             if(scelta == 1)
             {
                 foreach (Macchina macchina in macchine)
                 {
-                    if (macchina.InUso == false)
+                    if (macchina.InUso == false && macchina is Lavatrice)
                     {
+                        //prendiamo la macchina libera
+                        macchinaScelta = macchina;
                         macchina.Avvia();
+                        Console.WriteLine("Scegli il programma");
                         break;
+
                     }
                     else
                     {
@@ -42,6 +46,25 @@
 
                 }
                 
+            }
+            if (scelta == 2)
+            {
+                foreach (Macchina macchina in macchine)
+                {
+                    if (macchina.InUso == false && macchina is Asciugatrice)
+                    {
+                        macchina.Avvia();
+                        Console.WriteLine("Scegli il programma");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Nessuna macchina libera");
+                        break;
+                    }
+
+
+                }
+
             }
 
 
