@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace csharp_lavanderia
 {
-    internal class Programma
+    abstract class Programma
     {
         private string nome;
         private int costo;
