@@ -32,7 +32,9 @@
                     {
                         //prendiamo la macchina libera
                         macchinaScelta = macchina;
+                        Console.WriteLine(spacer);
                         macchina.Avvia();
+                        Console.WriteLine(spacer);
                         Console.WriteLine("Scegli il programma");
                         break;
 
@@ -52,7 +54,9 @@
                     if (macchina.InUso == false && macchina is Asciugatrice)
                     {
                         macchinaScelta = macchina;
+                        Console.WriteLine(spacer);
                         macchina.Avvia();
+                        Console.WriteLine(spacer);
                         Console.WriteLine("Scegli il programma");
                         break;
                     }
@@ -71,12 +75,43 @@
                 Console.WriteLine("[2] Rinnovante");
                 Console.WriteLine("[3] Sgrassante");
                 scelta = Convert.ToInt32(Console.ReadLine());
+                switch (scelta)
+                {
+                    case 1:
+                        Console.WriteLine(spacer);
+                        Console.WriteLine("Lavaggio rinfrescante avviato");
+                        Console.WriteLine(spacer);
+                        break;
+                    case 2:
+                        Console.WriteLine(spacer);
+                        Console.WriteLine("Lavaggio Rinnovante avviato");
+                        Console.WriteLine(spacer);
+                        break;
+                    case 3:
+                        Console.WriteLine(spacer);
+                        Console.WriteLine("Lavaggio Sgrassante avviato");
+                        Console.WriteLine(spacer);
+                        break;
+                }
             }
             if(macchinaScelta is Asciugatrice && macchinaScelta != null)
             {
                 Console.WriteLine("[1]Rapido");
                 Console.WriteLine("[2]Intenso");
                 scelta = Convert.ToInt32(Console.ReadLine());
+                switch(scelta)
+                {
+                    case 1:
+                        Console.WriteLine(spacer);
+                        Console.WriteLine("Asciugatura rapida avviata");
+                        Console.WriteLine(spacer);
+                        break;
+                    case 2:
+                        Console.WriteLine(spacer);
+                        Console.WriteLine("Asciugatura intensa avviata");
+                        Console.WriteLine(spacer);
+                        break;
+                }
             }
 
         }
