@@ -41,12 +41,15 @@ namespace csharp_lavanderia
         {
             Console.WriteLine($"Lavatrice {Id}. Stato ammorbidente: {StatoAmmorbidente}, stato detersivo {StatoDetersivo}.In uso {inUso}. Il guadagno è {Guadagno} ");
         }
-        public void Rinfrescante()
+        public virtual void Rinfrescante()
         {
             Costo = 2;
             Durata = 20;
             ConsumoDetersivo = 20;
             ConsumoAmmorbidente = 5;
+            Console.WriteLine(Program.Spacer);
+            Console.WriteLine("Lavaggio rinfrescante avviato");
+            Console.WriteLine(Program.Spacer);
         }
         public void Rinnovante()
         {
@@ -54,6 +57,9 @@ namespace csharp_lavanderia
             Durata = 60;
             ConsumoDetersivo = 40;
             ConsumoAmmorbidente = 5;
+            Console.WriteLine(Program.Spacer);
+            Console.WriteLine("Lavaggio rinnovante avviato");
+            Console.WriteLine(Program.Spacer);
         }
         public void Sgrassante()
         {
@@ -61,11 +67,19 @@ namespace csharp_lavanderia
             Durata = 60;
             ConsumoDetersivo = 60;
             ConsumoAmmorbidente = 15;
+
+            Console.WriteLine(Program.Spacer);
+            Console.WriteLine("Lavaggio sgrassante avviato");
+            Console.WriteLine(Program.Spacer);
         }
         public override void Avvia()
         {
             InUso = true;
+            Console.WriteLine(Program.Spacer);
             Console.WriteLine("Lavatrice avviata");
+            Console.WriteLine(Program.Spacer);
+
+
         }
 
     }

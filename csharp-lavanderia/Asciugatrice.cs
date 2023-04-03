@@ -28,7 +28,25 @@ namespace csharp_lavanderia
         public override void Avvia()
         {
             InUso = true;
+            Console.WriteLine(Program.Spacer);
             Console.WriteLine("Asciugatrice avviata");
+            Console.WriteLine(Program.Spacer);
+        }
+        public void Rapido()
+        {
+            Costo = 2;
+            Durata = 30;
+            Console.WriteLine(Program.Spacer);
+            Console.WriteLine("Asciugatura rapida avviata");
+            Console.WriteLine(Program.Spacer);
+        }
+        public void Intenso()
+        {
+            Costo = 4;
+            Durata = 60;
+            Console.WriteLine(Program.Spacer);
+            Console.WriteLine("Asciugatura intensa avviata");
+            Console.WriteLine(Program.Spacer);
         }
     }
 }
