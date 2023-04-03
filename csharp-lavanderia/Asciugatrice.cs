@@ -8,14 +8,17 @@ namespace csharp_lavanderia
 {
     internal class Asciugatrice : Macchina
     {
+        private int id;
         private List<Programma> programmi;
         private bool inUso;
 
+        public int Id { get; set; }
         public List<Programma> Programmi { get; set; }
         public bool InUso { get; set; }
 
-        public Asciugatrice(List<Programma> programmi,bool inUso) : base(programmi, inUso)
+        public Asciugatrice(int id,List<Programma> programmi) : base(programmi)
         {
+            Id = id;
             Programmi = programmi;
             InUso = inUso;
         }
