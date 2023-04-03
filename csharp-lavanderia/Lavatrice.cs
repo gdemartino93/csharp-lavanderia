@@ -45,8 +45,17 @@ namespace csharp_lavanderia
         {
             Costo = 2;
             Durata = 20;
-            cONSU
+            ConsumoDetersivo = 20;
+            ConsumoAmmorbidente = 5;
         }
+        public void Rinnovante()
+        {
+            Costo = 3;
+            Durata = 60;
+            ConsumoDetersivo = 40;
+            ConsumoAmmorbidente = 5;
+        }
+        
         
 
     }
