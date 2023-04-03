@@ -9,17 +9,16 @@ namespace csharp_lavanderia
     internal class Asciugatrice : Macchina
     {
         private int id;
-        private List<Programma> programmi;
         private bool inUso;
 
-        public int Id { get; set; }
-        public List<Programma> Programmi { get; set; }
-        public bool InUso { get; set; }
+        public override int Id { get; set; }
+        public override bool InUso { get; set; }
+        public override int Costo  { get; set; }
+        public override int Durata { get; set; }
 
-        public Asciugatrice(int id,List<Programma> programmi) : base(programmi)
+        public Asciugatrice(int id)
         {
             Id = id;
-            Programmi = programmi;
             InUso = inUso;
         }
         public override void ToString()
