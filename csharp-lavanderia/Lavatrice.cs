@@ -47,6 +47,7 @@ namespace csharp_lavanderia
             Durata = 20;
             ConsumoDetersivo = 20;
             ConsumoAmmorbidente = 5;
+            Guadagno += Costo;
             Console.WriteLine(Program.Spacer);
             Console.WriteLine("Lavaggio rinfrescante avviato");
             Console.WriteLine(Program.Spacer);
@@ -57,6 +58,7 @@ namespace csharp_lavanderia
             Durata = 60;
             ConsumoDetersivo = 40;
             ConsumoAmmorbidente = 5;
+            Guadagno += Costo;
             Console.WriteLine(Program.Spacer);
             Console.WriteLine("Lavaggio rinnovante avviato");
             Console.WriteLine(Program.Spacer);
@@ -67,7 +69,7 @@ namespace csharp_lavanderia
             Durata = 60;
             ConsumoDetersivo = 60;
             ConsumoAmmorbidente = 15;
-
+            Guadagno += Costo;
             Console.WriteLine(Program.Spacer);
             Console.WriteLine("Lavaggio sgrassante avviato");
             Console.WriteLine(Program.Spacer);
@@ -78,8 +80,10 @@ namespace csharp_lavanderia
             Console.WriteLine(Program.Spacer);
             Console.WriteLine("Lavatrice avviata");
             Console.WriteLine(Program.Spacer);
-
-
+        }
+        public override int VediGuadagno()
+        {
+            return Guadagno;
         }
 
     }

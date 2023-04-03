@@ -65,7 +65,6 @@
                     return;
                 }
             }
-
             if (macchinaScelta is Lavatrice && macchinaScelta != null)
             {
                 Lavatrice lavatriceScelta = (Lavatrice)macchinaScelta;
@@ -105,7 +104,8 @@
                         break;
                 }
             }
-
+            Console.WriteLine(macchinaScelta.VediGuadagno());
+            ;
         }
     }
 }
