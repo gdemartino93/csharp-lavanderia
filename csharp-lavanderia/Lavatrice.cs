@@ -8,25 +8,35 @@ namespace csharp_lavanderia
 {
     internal class Lavatrice : Macchina
     {
+        private int id;
         private int maxCapienzaDetersivo = 1000;
         private int maxCapienzaAmmorbidente = 500;
         private List<ProgrammaLavatrice> programmi;
         private int statoDetersivo;
         private int statoAmmorbidente;
-        private bool inUso;
+        private bool inUso = false;
 
-        public int MaxCapienzaDetersivo { get; }
-        public int MaxCapienzaAmmorbidente { get; }
+        public int Id { get; set; }
+        public int MaxCapienzaDetersivo { get { return maxCapienzaDetersivo; } }
+        public int MaxCapienzaAmmorbidente { get { return maxCapienzaAmmorbidente;} }
         public List<ProgrammaLavatrice> Programmi { get; set; }
         public int StatoDetersivo { get; set; }
         public int StatoAmmorbidente { get; set; }
-        public bool InUso { get; set; }
-        public Lavatrice(List<Programma> programmi, int statoDetersivo, int statoAmmorbidente,bool inUso) : base(programmi,inUso)
+        public bool InUso { get { return inUso; } set { inUso = value; } }
+
+        public Lavatrice(int id,List<Programma> programmi) : base(programmi)
         {
+            Id = id;
             Programmi = new List<ProgrammaLavatrice>();
-            StatoAmmorbidente = statoAmmorbidente;
-            StatoDetersivo = statoDetersivo;
+            StatoAmmorbidente = MaxCapienzaAmmorbidente;
+            StatoDetersivo = MaxCapienzaDetersivo;
             InUso = inUso;
+
+        }
+
+        public void ToString()
+        {
+            Console.WriteLine($"Lavatrice {Id}. Stato ammorbidente: {StatoAmmorbidente}, stato detersivo {StatoDetersivo}.In uso {inUso} ");
         }
     }
 }
