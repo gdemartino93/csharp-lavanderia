@@ -31,6 +31,9 @@
                         Console.WriteLine("Nessuna asciugatrice libera");
                     };
                     break;
+                case 3:
+                    sharpLavanderia.StatoMacchine();
+                    break;
             }
 
         }

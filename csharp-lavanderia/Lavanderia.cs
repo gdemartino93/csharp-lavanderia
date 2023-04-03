@@ -25,7 +25,13 @@ internal class Lavanderia
         Lavatrici = new List<Lavatrice>();
         Asciugatrici = new List<Asciugatrice>();
     }
-
+    public void StatoMacchine()
+    {
+        foreach (Macchina macchina in macchine)
+        {
+            macchina.ToString();
+        }
+    }
     public List<Lavatrice> OttieniLavatrici()
     {
         foreach (Macchina macchina in macchine)
