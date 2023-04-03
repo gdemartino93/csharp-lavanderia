@@ -13,10 +13,10 @@ namespace csharp_lavanderia
         public List<Programma> Programmi { get; set; }
         public bool InUso { get; set; }
 
-        public Macchina(List<Programma> programmi, bool inUso)
+        public Macchina(List<Programma> programmi)
         {
             Programmi = programmi;
-            InUso = inUso;
+
         }
     }
 }
