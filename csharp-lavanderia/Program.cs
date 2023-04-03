@@ -19,10 +19,20 @@
                 new Asciugatrice(4),
                 new Asciugatrice(5),
         };
-             foreach(Macchina macchina in macchine)
+            Console.WriteLine();
+            foreach (Macchina macchina in macchine)
             {
-                macchina.ToString();
+                if(macchina.InUso == false)
+                {
+                    macchina.Avvia();
+                    break;
+                }
             }
+            foreach (Macchina macchina in macchine)
+            {
+                Console.WriteLine($"Macchina {macchina.Id}: {(macchina.InUso ? "in uso" : "libera")}");
+            }
+
 
         }
     }
