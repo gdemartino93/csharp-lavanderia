@@ -62,7 +62,11 @@ namespace csharp_lavanderia
             ConsumoDetersivo = 60;
             ConsumoAmmorbidente = 15;
         }
-        
+        public override void Avvia()
+        {
+            InUso = true;
+            Console.WriteLine("Lavatrice avviata");
+        }
 
     }
 }

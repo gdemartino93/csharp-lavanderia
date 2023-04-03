@@ -18,5 +18,6 @@ namespace csharp_lavanderia
         {
             Console.WriteLine("asdsad");
         }
+        public abstract void Avvia();
     }
 }

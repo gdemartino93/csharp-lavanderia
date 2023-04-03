@@ -25,5 +25,10 @@ namespace csharp_lavanderia
         {
             Console.WriteLine($"Asciugatrice {Id}. In uso {InUso} ");
         }
+        public override void Avvia()
+        {
+            InUso = true;
+            Console.WriteLine("Asciugatrice avviata");
+        }
     }
 }
