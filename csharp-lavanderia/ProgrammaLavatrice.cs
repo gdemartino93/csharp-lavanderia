@@ -25,7 +25,7 @@ namespace csharp_lavanderia
 
         public void ToString()
         {
-            Console.WriteLine($"Programma {Nome}, Costo: {Costo}, Durata: {Durata}, Consumo Detersivo: {ConsumoDetersivo}, Consumo Ammorbidente: {consumoAmmorbidente}");
+            Console.WriteLine($"Programma {Nome}, Costo: {Costo}, Durata: {Durata}, Consumo Detersivo: {ConsumoDetersivo}, Consumo Ammorbidente: {ConsumoDetersivo}");
         }
     }
 }
