@@ -22,7 +22,5 @@ namespace csharp_lavanderia
             Costo = costo;
             Durata = durata;
         }
-
-        ProgrammaAsciugatrice forzamilan = new ProgrammaAsciugatrice("lavatrice", 1, 10);
     }
 }
